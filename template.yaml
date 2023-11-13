@@ -63,6 +63,8 @@ Resources:
       Environment:
         Variables:
           TABLE_NAME: !Ref TodoTable
+          POLICY_STORE_ID: !Ref DemoPolicyStore
+          PERMISSIONS_ENABLED: 'true'
       Policies:
         - Statement:
           - Effect: Allow
@@ -97,6 +99,12 @@ Resources:
               - "dynamodb:Scan"
             Resource: !GetAtt TodoTable.Arn
 
+  DemoPolicyStore:
+    Type: AWS::VerifiedPermissions::PolicyStore
+    Properties:
+      ValidationSettings: 
+        Mode: STRICT
+      
   ApplicationResourceGroup:
     Type: AWS::ResourceGroups::Group
     Properties:
