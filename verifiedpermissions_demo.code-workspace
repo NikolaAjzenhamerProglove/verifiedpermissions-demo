@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"mypy-type-checker.path": [
+			"~/.pyenv/shims/mypy"
+		]
+	}
+}
