@@ -77,8 +77,8 @@ Resources:
               - !Join ["/", [!GetAtt TodoTable.Arn, "index/*"]]
           - Effect: Allow
             Action:
-              - "verifiedpermissions:*"
-            Resource: "*"
+              - "verifiedpermissions:IsAuthorized"
+            Resource: !GetAtt DemoPolicyStore.Arn
 
   TodoCreateHierarchyFunction:
     Type: AWS::Serverless::Function
