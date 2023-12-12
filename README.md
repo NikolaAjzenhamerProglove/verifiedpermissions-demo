@@ -15,3 +15,11 @@ Deploying project is done by running the following command:
 ```bash
 sam deploy --region=eu-west-1
 ```
+
+## Cleanup
+
+Removing the stack is done by running the following command:
+
+```bash
+aws cloudformation delete-stack --stack-name=verifiedpermissions-demo
+```
