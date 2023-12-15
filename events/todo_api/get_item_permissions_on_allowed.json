@@ -1,0 +1,7 @@
+{
+    "username": "alice",
+    "action": "GetItem",
+    "body": {
+        "id": "T-3"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "body": {
+        "name": "My first board",
+        "type": "B",
+        "items": [
+            {
+                "name": "Learn Cedar language",
+                "type": "L",
+                "items": [
+                    {
+                        "name": "Learn about the language",
+                        "type": "T"
+                    },
+                    {
+                        "name": "Learn about the syntax",
+                        "type": "T"
+                    }
+                ]
+            }
+        ]
+    }
+}

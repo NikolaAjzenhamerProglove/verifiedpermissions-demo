@@ -1,0 +1,60 @@
+{
+    "body": {
+        "name": "Learn about Verified permissions",
+        "type": "B",
+        "items": [
+            {
+                "name": "Explore documentation",
+                "type": "L",
+                "items": [
+                    {
+                        "name": "Read documentation",
+                        "type": "T"
+                    }
+                ]
+            },
+            {
+                "name": "Try out the new service",
+                "type": "B",
+                "items": [
+                    {
+                        "name": "Prepare the code examples",
+                        "type": "L",
+                        "items": [
+                            {
+                                "name": "Install Python",
+                                "type": "T"
+                            },
+                            {
+                                "name": "Install requirements",
+                                "type": "T"
+                            },
+                            {
+                                "name": "Download the repository",
+                                "type": "T"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Execute the code examples",
+                        "type": "L",
+                        "items": [
+                            {
+                                "name": "Build the code",
+                                "type": "T"
+                            },
+                            {
+                                "name": "Deploy the code",
+                                "type": "T"
+                            },
+                            {
+                                "name": "Run the examples",
+                                "type": "T"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

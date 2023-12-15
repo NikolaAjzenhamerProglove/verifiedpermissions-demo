@@ -1,0 +1,6 @@
+{
+    "action": "GetItem",
+    "body": {
+        "id": "T-1"
+    }
+}

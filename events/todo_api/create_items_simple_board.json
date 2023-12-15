@@ -1,0 +1,39 @@
+{
+    "action": "CreateItems",
+    "body": {
+        "items": [
+            {
+                "id": "B-1",
+                "parent_id": "B-1",
+                "board_id": "B-1",
+                "path": "B-1",
+                "name": "My first board",
+                "type": "BOARD"
+            },
+            {
+                "id": "L-1",
+                "parent_id": "B-1",
+                "board_id": "B-1",
+                "path": "B-1#L-1",
+                "name": "Learn Cedar language",
+                "type": "LIST"
+            },
+            {
+                "id": "T-1",
+                "parent_id": "L-1",
+                "board_id": "B-1",
+                "path": "B-1#L-1#T-1",
+                "name": "Learn about the language",
+                "type": "TASK"
+            },
+            {
+                "id": "T-2",
+                "parent_id": "L-1",
+                "board_id": "B-1",
+                "path": "B-1#L-1#T-2",
+                "name": "Learn about the syntax",
+                "type": "TASK"
+            }
+        ]
+    }
+}

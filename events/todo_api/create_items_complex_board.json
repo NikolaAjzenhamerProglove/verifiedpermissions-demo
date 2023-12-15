@@ -1,0 +1,103 @@
+{
+    "action": "CreateItems",
+    "body": {
+        "items": [
+            {
+                "id": "B-2",
+                "parent_id": "B-2",
+                "board_id": "B-2",
+                "path": "B-2",
+                "name": "Learn about Verified permissions",
+                "type": "BOARD"
+            },
+            {
+                "id": "L-2",
+                "parent_id": "B-2",
+                "board_id": "B-2",
+                "path": "B-2#L-2",
+                "name": "Explore documentation",
+                "type": "LIST"
+            },
+            {
+                "id": "T-3",
+                "parent_id": "L-2",
+                "board_id": "B-2",
+                "path": "B-2#L-2#T-3",
+                "name": "Read documentation",
+                "type": "TASK"
+            },
+            {
+                "id": "B-3",
+                "parent_id": "B-2",
+                "board_id": "B-2",
+                "path": "B-2#B-3",
+                "name": "Try out the new service",
+                "type": "BOARD"
+            },
+            {
+                "id": "L-3",
+                "parent_id": "B-3",
+                "board_id": "B-2",
+                "path": "B-2#B-3#L-3",
+                "name": "Prepare the code examples",
+                "type": "LIST"
+            },
+            {
+                "id": "T-4",
+                "parent_id": "L-3",
+                "board_id": "B-2",
+                "path": "B-2#B-3#L-3#T-4",
+                "name": "Install Python",
+                "type": "TASK"
+            },
+            {
+                "id": "T-5",
+                "parent_id": "L-3",
+                "board_id": "B-2",
+                "path": "B-2#B-3#L-3#T-5",
+                "name": "Install requirements",
+                "type": "TASK"
+            },
+            {
+                "id": "T-6",
+                "parent_id": "L-3",
+                "board_id": "B-2",
+                "path": "B-2#B-3#L-3#T-6",
+                "name": "Download the repository",
+                "type": "TASK"
+            },
+            {
+                "id": "L-4",
+                "parent_id": "B-3",
+                "board_id": "B-2",
+                "path": "B-2#B-3#L-4",
+                "name": "Execute the code examples",
+                "type": "LIST"
+            },
+            {
+                "id": "T-7",
+                "parent_id": "L-4",
+                "board_id": "B-2",
+                "path": "B-2#B-3#L-4#T-7",
+                "name": "Build the code",
+                "type": "TASK"
+            },
+            {
+                "id": "T-8",
+                "parent_id": "L-4",
+                "board_id": "B-2",
+                "path": "B-2#B-3#L-4#T-8",
+                "name": "Deploy the code",
+                "type": "TASK"
+            },
+            {
+                "id": "T-9",
+                "parent_id": "L-4",
+                "board_id": "B-2",
+                "path": "B-2#B-3#L-4#T-9",
+                "name": "Run the examples",
+                "type": "TASK"
+            }
+        ]
+    }
+}
