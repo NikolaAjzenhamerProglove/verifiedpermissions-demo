@@ -1,0 +1,6 @@
+{
+    "username": "alice",
+    "action": "GetItem",
+    "resource": "T-3",
+    "allow": true
+}

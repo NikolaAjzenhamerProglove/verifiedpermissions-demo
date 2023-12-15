@@ -51,6 +51,12 @@ Resources:
             ProjectionType: ALL
       BillingMode: PAY_PER_REQUEST
 
+  DemoPolicyStore:
+    Type: AWS::VerifiedPermissions::PolicyStore
+    Properties:
+      ValidationSettings: 
+        Mode: OFF
+
   TodoAPIFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -64,7 +70,7 @@ Resources:
         Variables:
           TABLE_NAME: !Ref TodoTable
           POLICY_STORE_ID: !Ref DemoPolicyStore
-          PERMISSIONS_ENABLED: 'true'
+          PERMISSIONS_ENABLED: 'false'
       Policies:
         - Statement:
           - Effect: Allow
@@ -99,11 +105,24 @@ Resources:
               - "dynamodb:Scan"
             Resource: !GetAtt TodoTable.Arn
 
-  DemoPolicyStore:
-    Type: AWS::VerifiedPermissions::PolicyStore
+  TodoCreatePermissionFunction:
+    Type: AWS::Serverless::Function
     Properties:
-      ValidationSettings: 
-        Mode: STRICT
+      CodeUri: todo_create_permission/
+      Handler: app.lambda_handler
+      Architectures:
+      - x86_64
+      Layers:
+        - !Ref AWSLambdaPowertoolsLayerArn
+      Environment:
+        Variables:
+          POLICY_STORE_ID: !Ref DemoPolicyStore
+      Policies:
+        - Statement:
+          - Effect: Allow
+            Action:
+              - "verifiedpermissions:CreatePolicy"
+            Resource: !GetAtt DemoPolicyStore.Arn
       
   ApplicationResourceGroup:
     Type: AWS::ResourceGroups::Group
