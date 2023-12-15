@@ -2,6 +2,8 @@ from copy import deepcopy
 from typing import Optional
 from boto3_resources import Boto3Resources
 
+NAMESPACE = "TODO"
+
 
 def _get_item_from_event(resource_id: str, bt3: Boto3Resources) -> Optional[dict]:
     return bt3.dynamodb_table.get_item(Key={"id": resource_id}).get("Item")
@@ -11,11 +13,11 @@ def _create_resource_entity_identifier(entity_id: str) -> dict:
     entity_type: str
 
     if entity_id.startswith("B"):
-        entity_type = "NS::Board"
+        entity_type = f"{NAMESPACE}::Board"
     elif entity_id.startswith("L"):
-        entity_type = "NS::List"
+        entity_type = f"{NAMESPACE}::List"
     else:
-        entity_type = "NS::Task"
+        entity_type = f"{NAMESPACE}::Task"
 
     return {
         "entityType": entity_type,
@@ -56,11 +58,11 @@ def can_execute(event: dict, bt3: Boto3Resources) -> bool:
     response = bt3.verifiedpermissions.is_authorized(
         policyStoreId=bt3.POLICY_STORE_ID,
         principal={
-            "entityType": "NS::User",
+            "entityType": f"{NAMESPACE}::User",
             "entityId": principal_id,
         },
         action={
-            "actionType": "NS::Action",
+            "actionType": f"{NAMESPACE}::Action",
             "actionId": action_id,
         },
         resource=_create_resource_entity_identifier(resource_id),
