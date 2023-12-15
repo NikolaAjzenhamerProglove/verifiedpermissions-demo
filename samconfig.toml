@@ -15,8 +15,9 @@ lint = true
 
 [default.deploy.parameters]
 capabilities = "CAPABILITY_IAM"
-confirm_changeset = true
+confirm_changeset = false
 resolve_s3 = true
+region = "eu-west-1"
 
 [default.package.parameters]
 resolve_s3 = true
@@ -29,3 +30,11 @@ warm_containers = "EAGER"
 
 [default.local_start_lambda.parameters]
 warm_containers = "EAGER"
+
+[default.remote_invoke.parameters]
+region = "eu-west-1"
+stack_name = "verifiedpermissions-demo"
+
+[default.remote_test_event_put.parameters]
+region = "eu-west-1"
+stack_name = "verifiedpermissions-demo"
